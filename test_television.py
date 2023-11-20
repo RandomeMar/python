@@ -1,7 +1,8 @@
-import unittest
+import pytest
 from television import *
 
-class MyTestCase(unittest.TestCase):
+
+class Test:
     def test__init__(self):
         tv_1 = Television()
         assert tv_1.__str__() == f'Power = False, Channel = 0, Volume = 0'
@@ -78,12 +79,3 @@ class MyTestCase(unittest.TestCase):
         assert tv_1.__str__() == f'Power = True, Channel = 0, Volume = 0'
         tv_1.volume_down()
         assert tv_1.__str__() == f'Power = True, Channel = 0, Volume = 0'
-
-
-
-
-
-
-
-
-
